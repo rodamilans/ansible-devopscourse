@@ -1,0 +1,18 @@
+---
+- hosts: weberver
+  become: True
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present 
+    - name: Start Apache Server
+      service: 
+        name: httpd
+        state: started
+        enabled: True
+    - name: Deploy static websiite
+      copy: index.html
+      dest: /var/www/html
+
+
