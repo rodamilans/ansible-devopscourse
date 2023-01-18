@@ -1,5 +1,5 @@
 ---
-- hosts: weberver
+- hosts: webserver
   become: True
   tasks:
     - name: Install Apache
