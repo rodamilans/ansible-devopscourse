@@ -12,7 +12,8 @@
         state: started
         enabled: True
     - name: Deploy static websiite
-      copy: index.html
-      dest: /var/www/html
+      copy: 
+        src: index.html
+        dest: /var/www/html
 
 
